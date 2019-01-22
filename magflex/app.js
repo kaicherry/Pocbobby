@@ -7,14 +7,6 @@ const cameraView = document.querySelector("#camera--view"),
     cameraTrigger = document.querySelector("#camera--trigger")
 // Access the device camera and stream to cameraView
 function cameraStart() {
-    var canvas = document.getElementById('camera--sensor"');
-    var context = canvas.getContext('2d');
-    // translate context to center of canvas
-    context.translate(canvas.width / 2, canvas.height / 2);
-    
-    // flip context horizontally
-    context.scale(-1, 1);
-    
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
