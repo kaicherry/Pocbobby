@@ -10,6 +10,13 @@ function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
+              var canvas = document.getElementById('camera--view"');
+              var context = canvas.getContext('2d');
+              // translate context to center of canvas
+              context.translate(canvas.width / 2, canvas.height / 2);
+              
+              // flip context horizontally
+              context.scale(-1, 1);
         track = stream.getTracks()[0];
         cameraView.srcObject = stream;
     })
