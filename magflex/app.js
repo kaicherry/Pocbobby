@@ -10,7 +10,7 @@ function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
-              var canvas = document.getElementById('camera--view"');
+              var canvas = document.getElementById('camera--sensor"');
               var context = canvas.getContext('2d');
               // translate context to center of canvas
               context.translate(canvas.width / 2, canvas.height / 2);
